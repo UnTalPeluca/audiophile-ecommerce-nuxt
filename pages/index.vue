@@ -9,7 +9,7 @@
       </Container>
     </section>
     <section>
-      <Container class="flex flex-col gap-6">
+      <Container class="flex flex-col gap-6 lg:gap-12">
         <CardHomeProductA :product="product1" />
         <CardHomeProductB :product="product2" />
         <CardHomeProductC :product="product3" />

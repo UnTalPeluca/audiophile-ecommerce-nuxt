@@ -1,19 +1,15 @@
 <template>
   <div>
     <NuxtLayout>
-      <NuxtPage />
+      <NuxtPage class="font-sans text-base"/>
     </NuxtLayout>
   </div>
 </template>
 
 <style>
-body,
-pre,
-a {
-  font-family: sans-serif;
-}
 
 body {
   overflow-x: hidden;
 }
+
 </style>
