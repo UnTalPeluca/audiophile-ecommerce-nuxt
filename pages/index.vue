@@ -1,8 +1,7 @@
 <template>
   <div class="flex flex-col gap-32">
     <section>
-      <HeroHeader :title="hero.title" :description="hero.description" :image="hero.image" :link="hero.link"
-       />
+      <HeroHeader :title="hero.title" :description="hero.description" :image="hero.image" :link="hero.link" />
     </section>
     <section>
       <Container>
@@ -10,6 +9,9 @@
       </Container>
     </section>
     <section>
+      <NuxtLink to="eaewaea">
+        eaeaeaea
+      </NuxtLink>
       <Container class="flex flex-col gap-6">
         <CardHomeProductA :product="product1" />
         <CardHomeProductB :product="product2" />

@@ -6,7 +6,8 @@
     <div class="flex flex-col gap-32">
       <section>
         <Container class="flex flex-col gap-32">
-          <CardCategoryProduct v-for="(product, index) in products" :key="product.id" :product="product" :class="index % 2 === 0 ? 'lg:flex-row-reverse': ''"/>
+          <CardCategoryProduct v-for="(product, index) in products" :key="product.id" :product="product"
+            :class="index % 2 === 0 ? 'lg:flex-row-reverse' : ''" />
         </Container>
       </section>
       <section class="pt-12">
@@ -26,4 +27,7 @@ const route = useRoute()
 const title = route.params.category
 const { getProductsByCategory } = useFirestore()
 const products = await getProductsByCategory(title)
+if (products.length === 0) {
+  throw createError({ statusCode: 404, message: 'Category not found' })
+}
 </script>
