@@ -9,9 +9,6 @@
       </Container>
     </section>
     <section>
-      <NuxtLink to="eaewaea">
-        eaeaeaea
-      </NuxtLink>
       <Container class="flex flex-col gap-6">
         <CardHomeProductA :product="product1" />
         <CardHomeProductB :product="product2" />
