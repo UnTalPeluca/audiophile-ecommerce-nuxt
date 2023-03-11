@@ -1,5 +1,5 @@
 <template>
-  <div class="flex flex-col gap-32">
+  <div class="flex flex-col gap-32 lg:gap-44">
     <section>
       <HeroHeader :title="hero.title" :description="hero.description" :image="hero.image" :link="hero.link" />
     </section>
