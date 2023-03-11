@@ -1,19 +1,5 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
-  head: {
-    link: [
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
-      {
-        rel: "preconnect",
-        href: "https://fonts.gstatic.com",
-        crossorigin: true,
-      },
-      {
-        href: "https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700&display=swap",
-        rel: "stylesheet",
-      },
-    ],
-  },
   modules: [
     "@nuxtjs/tailwindcss",
     "@nuxtjs/i18n",
@@ -52,9 +38,6 @@ export default defineNuxtConfig({
               },
             ],
           },
-          fontFamily: {
-            sans: ["Manrope", "sans-serif"],
-          },
           letterSpacing: {
             wide: "0.05em",
             wider: "0.075em",
@@ -69,6 +52,9 @@ export default defineNuxtConfig({
           width: {
             32: "7.5rem",
           },
+          fontFamily: {
+            sans: ['Manrope'],
+          }
         },
       },
     },
