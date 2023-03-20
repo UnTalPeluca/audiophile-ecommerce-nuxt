@@ -34,6 +34,9 @@
 </template>
 
 <script setup>
+useHead({
+  title: "Audiophile - Checkout"
+})
 const showSuccessOverlay = ref(false)
 const checkoutForm = ref(null)
 const successData = ref(null)

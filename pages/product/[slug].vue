@@ -32,9 +32,13 @@ const { getProductBySlug } = useFirestore()
 
 const suggestedProducts = ref([])
 const product = await getProductBySlug(params.slug)
+
 if (!product) {
   throw createError({ statusCode: 404, message: 'Product not found' })
 }
+useHead({
+  title: `Audiophile - ${product.name}`
+})
 const getSuggestedProducts = async () => {
   const products = []
   const promises = Object.values(product.others).map(async (slug) => {
@@ -44,7 +48,6 @@ const getSuggestedProducts = async () => {
   await Promise.all(promises)
   suggestedProducts.value = products
 }
-
 getSuggestedProducts()
 </script>
 

@@ -30,4 +30,7 @@ const products = await getProductsByCategory(title)
 if (products.length === 0) {
   throw createError({ statusCode: 404, message: 'Category not found' })
 }
+useHead({
+  title: `Audiophile - ${title.toUpperCase()}`
+})
 </script>

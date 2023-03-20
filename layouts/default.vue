@@ -9,3 +9,9 @@
     <Footer />
   </div>
 </template>
+
+<script setup>
+useHead({
+  title: "Audiophile"
+})
+</script>

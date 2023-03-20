@@ -22,7 +22,9 @@
 </template>
 
 <script setup>
-
+useHead({
+  title: "Audiophile - Home"
+})
 const hero = {
   title: 'XX99 Mark II Headphones',
   description: 'Experience natural, lifelike audio and exceptional build quality made for the passionate music enthusiast.',

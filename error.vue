@@ -13,5 +13,8 @@
 </template>
 
 <script setup>
-defineProps(['error'])
+const props = defineProps(['error'])
+useHead({
+  title: `Audiophile - ${props.error.statusCode}`
+})
 </script>
