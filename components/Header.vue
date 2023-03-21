@@ -12,10 +12,12 @@
       </NuxtLink>
       <NavLinksList class="hidden lg:block" />
       <button class="relative">
-        <div v-if="cart.products.length >= 1"
-          class="text-white font-bold absolute -top-2 bg-dark-orange w-5 h-5 rounded-full text-xs -right-4 flex items-center justify-center select-none cursor-default pointer-events-none">
-          <p>{{ cart.products.length }}</p>
-        </div>
+        <ClientOnly>
+          <div v-if="cart.products.length >= 1"
+            class="text-white font-bold absolute -top-2 bg-dark-orange w-5 h-5 rounded-full text-xs -right-4 flex items-center justify-center select-none cursor-default pointer-events-none">
+            <p>{{ cart.products.length }}</p>
+          </div>
+        </ClientOnly>
         <IconContainer @click="handleCartClick">
           <IconCart />
         </IconContainer>
