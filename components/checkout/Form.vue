@@ -6,7 +6,7 @@
       <FormBaseInput v-model="emailValue" :error="emailError" placeholder="alexei@mail.com" :disabled="isTooManyAttempts"
         label="Email Address" />
       <FormBaseInput v-model="phoneValue" :error="phoneError" placeholder="+1 202-555-0136" :disabled="isTooManyAttempts"
-        label="Phone Number" format="phone" />
+        label="Phone Number" format="phone" maxlength="14"/>
     </FormFieldset>
     <FormFieldset title="Shipping Info" class="md:grid md:grid-cols-2">
       <FormBaseInput v-model="addressValue" :error="addressError" placeholder="1137 Williams Avenue"
@@ -44,7 +44,7 @@
 
 <script setup>
 import { useField, useForm } from 'vee-validate';
-import { object, string, ref as yupRef } from 'yup';
+import { object, string } from 'yup';
 const props = defineProps({
   onSuccess: {
     type: Function

@@ -34,6 +34,7 @@
 </template>
 
 <script setup>
+
 useHead({
   title: "Audiophile - Checkout"
 })
@@ -44,10 +45,19 @@ const cart = useCartStore();
 const setShowSuccessOverlay = (value) => {
   showSuccessOverlay.value = value
 }
-const onSuccessSubmit = () => {
-  successData.value = { ...cart }
-  setShowSuccessOverlay(true)
-  cart.clearCart()
+const onSuccessSubmit = async (formValue) => {
+  const response = await useFetch(
+    '/api/checkout',
+    {
+      method: 'POST',
+      body: formValue
+    }
+  )
+  if (response.data.value.status === 200) {
+    successData.value = { ...cart }
+    setShowSuccessOverlay(true)
+    cart.clearCart()
+  }
 }
 
 </script>
