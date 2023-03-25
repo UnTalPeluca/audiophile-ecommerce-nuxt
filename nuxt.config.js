@@ -13,6 +13,9 @@ export default defineNuxtConfig({
   imports: {
     dirs: ["stores"],
   },
+  app: {
+    pageTransition: { name: 'page', mode: 'out-in' }
+  },
   tailwindcss: {
     config: {
       theme: {
