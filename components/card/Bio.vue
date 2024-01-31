@@ -20,8 +20,8 @@
 
 <script setup>
 const image = {
-  mobile: '/shared/mobile/image-best-gear.jpg',
-  tablet: '/shared/tablet/image-best-gear.jpg',
-  desktop: '/shared/desktop/image-best-gear.jpg'
+  mobile: '/shared/mobile/image-best-gear.webp',
+  tablet: '/shared/tablet/image-best-gear.webp',
+  desktop: '/shared/desktop/image-best-gear.webp'
 }
 </script>

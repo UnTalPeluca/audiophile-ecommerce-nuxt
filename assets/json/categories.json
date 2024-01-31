@@ -2,16 +2,16 @@
   "headphones": {
     "name": "Headphones",
     "link": "/category/headphones",
-    "image": "/category/thumbnail-headphones.png"
+    "image": "/category/thumbnail-headphones.webp"
   },
   "speakers": {
     "name": "Speakers",
     "link": "/category/speakers",
-    "image": "/category/thumbnail-speakers.png"
+    "image": "/category/thumbnail-speakers.webp"
   },
   "earphones": {
     "name": "Earphones",
     "link": "/category/earphones",
-    "image": "/category/thumbnail-earphones.png"
+    "image": "/category/thumbnail-earphones.webp"
   }
 }
